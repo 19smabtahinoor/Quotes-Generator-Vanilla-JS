@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="shortcut icon" href="https://smabtahinoor.vercel.app/images/profilepic.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <style>
+        /* Background styles */
+        body {
+            background-image: url('https://images.unsplash.com/photo-1513622019133-9050ec39da80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Glassmorphism card effect */
+        .quotes_container {
+            backdrop-filter: blur(3px) saturate(180%);
+            -webkit-backdrop-filter: blur(3px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            min-height: 50vh;
+            margin-top: 10px;
+        }
+
+        #quote {
+            font-family: 'Marck Script', cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class=" max-w-screen-lg mx-auto px-12  flex flex-col justify-center h-screen">
+
+        <div class="quotes_container rounded-md grid grid-rows-4 my-24 p-8 box-border">
+            <div class="row-span-1">
+                <h2 class="text-white text-4xl font-semibold text-center">Quotes Generator</h2>
+            </div>
+
+            <div class="row-span-2 flex flex-col justify-center">
+                <blockquote id="quote" class="text-white text-3xl text-center select-all">
+                    Please Click on the "New Quote Button"
+                </blockquote>
+            </div>
+
+            <div class="row-span-1 flex items-end">
+                <!-- load post  -->
+                <button
+                    class="transition duration-700 ease-in-out bg-blue-600 focus:ring-4 focus:ring-blue-400 focus:outline-none text-white py-3 px-6 w-full rounded-md"
+                    onclick="loadQuotes()">
+                    New Quote
+                </button>
+            </div>
+
+            <p class="inline-block text-center text-white mt-6">Made by 💖 <a class="text-yellow-300 hover:underline"
+                    href="https://smabtahinoor.vercel.app" target="_blank">S.M.Abtahi Noor</a></p>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
